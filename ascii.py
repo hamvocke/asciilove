@@ -12,10 +12,11 @@ symbols = {0.8: " ", 0.6: "░", 0.4:"▒", 0.2: "▓", 0.0: "█"}
 output = ""
 
 def char_for_color(color):
+    closest_key = next(iter(symbols.keys()))
     for key in symbols:
-        if color.red >= key:
-            return symbols[key]
-    return symbols[0.8]
+        if abs(color.red - key) < abs(color.red - closest_key):
+            closest_key = key
+    return symbols[closest_key]
 
 with Image(filename=args.image) as img:
     img.modulate(saturation=0)
