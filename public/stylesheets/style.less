@@ -1,23 +1,32 @@
+@light: #ddd;
+@dark: #333;
+@red: #E74C3C;
+@cream: #ECF0F1;
+
 body {
   font: 18px Helvetica, Arial, sans-serif;
-  background-color: #E74C3C;
+  background-color: @light;
 }
 
 a {
-  color: #00B7FF;
+  color: @red;
 }
 
 #hero {
-  background-color: #E74C3C;
-  padding: 50px;
+  background-color: @red;
+  padding: 20px 50px;
   margin: 0;
   height: 100%;
 
   h1, h2, h3, h4 {
-    color: #ECF0F1;
+    color: @light;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
+
+    .light {
+      font-weight: 200;
+    }
   }
 
   h1 {
