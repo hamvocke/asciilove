@@ -1,10 +1,11 @@
-@light: #ddd;
+@light: #eee;
 @dark: #333;
 @red: #E74C3C;
 @cream: #ECF0F1;
 
 body {
-  font: 18px Helvetica, Arial, sans-serif;
+  font: 18px 'Raleway', sans-serif;
+  font-weight: 200;
   background-color: @light;
 }
 
@@ -12,24 +13,23 @@ a {
   color: @red;
 }
 
-#hero {
-  background-color: @red;
-  padding: 20px 50px;
-  margin: 0;
-  height: 100%;
+h1, h2, h3, h4 {
+  color: @dark;
+  font-weight: 800;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
 
-  h1, h2, h3, h4 {
-    color: @light;
-    font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-
-    .light {
-      font-weight: 200;
-    }
+  .light {
+    font-weight: 200;
   }
+}
 
-  h1 {
-    font-size: 4em;
-  }
+h1 {
+  font-size: 4em;
+}
+
+#upload {
+  text-align: center;
+  padding: 200px 50px;
+  border: 1px solid @dark;
 }
