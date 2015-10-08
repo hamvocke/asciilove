@@ -51,5 +51,28 @@ $(function() {
   })
 
   // initialize dropzone
-  $("div#upload").dropzone({ url: "/upload" });
+  var dropzone = new Dropzone("div#upload",
+    {
+      url: "/upload",
+      paramName: "image"
+    }
+  );
+
+  dropzone.on("complete", function(file) {
+    dropzone.removeFile(file);
+  });
+
+  dropzone.on("success", function(file, response) {
+    console.log(file);
+    console.log(arguments);
+    console.log("Done!");
+    console.log(JSON.stringify(response));
+    $("#upload>p").fadeToggle(function() {
+      $("#upload>textarea").text(response);
+      // $("#upload>textarea").prop("cols", ascii.);
+      $("#upload>textarea").fadeToggle();
+    });
+  });
+
+
 });
