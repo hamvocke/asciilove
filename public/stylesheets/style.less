@@ -1,23 +1,29 @@
+@yellow: #FAD46B;
 @light: #eee;
-@dark: #333;
+@dark: #444;
 @red: #E74C3C;
 @cream: #ECF0F1;
 
-body {
+html, body {
   font: 18px 'Raleway', sans-serif;
   font-weight: 200;
-  background-color: @light;
+  font-size: 16pt;
+  height: 100%;
+  background-color: @yellow;
 }
 
 a {
   color: @red;
 }
 
+p.lead {
+  font-size: 1.5em;
+}
+
 h1, h2, h3, h4 {
   color: @dark;
   font-weight: 800;
   font-family: 'Raleway', sans-serif;
-  text-transform: uppercase;
 
   .light {
     font-weight: 200;
@@ -28,8 +34,33 @@ h1 {
   font-size: 4em;
 }
 
+.full-height {
+  height: 100%;
+}
+
+#hero {
+  background-color: @yellow;
+  margin-top: 40%;
+  margin-left: 50px;
+}
+
+
 #upload {
   text-align: center;
-  padding: 200px 50px;
-  border: 1px solid @dark;
+  background-color: @light;
+  min-height: 100%;
+  padding: 50px;
+
+  p {
+    margin-top: 50%;
+    font-size: 1.4em;
+  }
+
+  textarea {
+    font-family: 'Source Code Pro', ;
+    background: none;
+    border: none;
+    display: none;
+    font-size: 0.7em;
+  }
 }

@@ -18,7 +18,7 @@ def char_for_color(color):
 with Image(filename=args.image) as img:
     img.modulate(saturation=0)
     #img.level(black=0.2, white=0.8)
-    img.negate()
+    #img.negate()
     img.resize(height=int(img.height//5), width=img.width//3)
     for row in img:
         for col in row:

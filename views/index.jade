@@ -1,9 +1,15 @@
 extends layout
 
 block content
-  div.container
-    h1 asciilove
-    h2 ascii art. made easy.
-    p.lead ascii.love will help you create awesome ascii art from your images. Hassle free
+  div.container-fluid.full-height
+    div.row.full-height
+      div.col-md-6.full-height
+        div#hero
+          h1 ascii.love
+          p.lead Create fancy ASCII art from your images. Hassle free.
+          button#get-started.btn.btn-danger.btn-lg Get Started
 
-    div#upload Drop image to enjoy ascii art awesomeness!
+      div.col-md-6.full-height
+        div#upload
+          p Drop image here to enjoy ascii art awesomeness!
+          textarea(rows=40, cols=87, readonly)
