@@ -5,12 +5,18 @@ block content
     div.row.full-height
       div.col-md-6.full-height
         div#hero
-          h1 ascii.love
+
+          h1 ascii.love  
+            i.fa.fa-heart.logo
+
           p.lead Create fancy ASCII art from your images. Hassle free.
-          button#get-started.btn.btn-danger.btn-lg Get Started
+          button#get-started.btn.btn-danger.btn-lg Upload new image
 
       div.col-md-6.full-height
         div#upload
-          p Drop image here to enjoy ascii art awesomeness!
+
+          p
+            i.fa.fa-cloud-upload.big-icon
+            <br>Drop image here to enjoy ascii art awesomeness!
 
           textarea(rows=40, cols=87, readonly)
