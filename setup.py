@@ -7,5 +7,11 @@ setup(name='asciilove',
 	author='Hermann Vocke',
 	author_email='ham@hamvocke.com',
 	license='MIT',
-	package=['asciilove'],
-	zip_safe=False)
+	packages=['asciilove'],
+	install_requires=[
+	    'wand'
+	],
+	entry_points={
+	    'console_scripts': ['asciilove=asciilove.commandline:main'],    
+	}
+	)
