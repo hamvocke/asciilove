@@ -2,6 +2,7 @@
 
 from unittest import TestCase
 from asciilove import converter
+import io
 
 class Color():
     red = 0.0
@@ -49,3 +50,14 @@ class RoundingTest(TestCase):
     def test_should_truncate_negative_numbers(self):
         self.assertEqual(converter.round(-0.0124), 0.0)
         self.assertEqual(converter.round(-0.5), 0.0)
+
+class ConversionTest(TestCase):
+    def test_should_convert_negated_image(self):
+        self.maxDiff = None
+        with io.open("test/expectedNegativeAscii.txt", newline='') as expected_ascii:
+            self.assertEqual(converter.convert("test/ham.jpg", negative=True), expected_ascii.read())
+
+    def test_should_convert_image(self):
+        self.maxDiff = None
+        with io.open("test/expectedPositiveAscii.txt", newline='') as expected_ascii:
+            self.assertEqual(converter.convert("test/ham.jpg", negative=False), expected_ascii.read())
