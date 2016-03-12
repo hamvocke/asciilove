@@ -34,7 +34,7 @@ class ColorCharTest(TestCase):
         self.assertEqual(converter.char_for_color(Color(0.399, 0.0, 0.0)), "▓")
         self.assertEqual(converter.char_for_color(Color(0.25, 0.0, 0.95)), "▓")
         self.assertEqual(converter.char_for_color(Color(0.2, 0.4, 0.6)), "▓")
-    
+
     def test_should_return_shade_four(self):
         self.assertEqual(converter.char_for_color(Color(0.199, 0.0, 0.0)), "█")
         self.assertEqual(converter.char_for_color(Color(0.15, 0.0, 0.95)), "█")
