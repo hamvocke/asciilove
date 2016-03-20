@@ -17,29 +17,29 @@ class Color():
 class ColorCharTest(TestCase):
 
     def test_char_for_color_should_return_blank_character(self):
-        self.assertEqual(converter.char_for_color(Color(1.0, 0.0, 0.0)), " ")
-        self.assertEqual(converter.char_for_color(Color(0.923, 0.9, 0.2)), " ")
-        self.assertEqual(converter.char_for_color(Color(0.821, 0.4, 0.6)), " ")
+        self.assertEqual(converter.char_for_color(Color(1.0, 0.0, 0.0)), u" ")
+        self.assertEqual(converter.char_for_color(Color(0.923, 0.9, 0.2)), u" ")
+        self.assertEqual(converter.char_for_color(Color(0.821, 0.4, 0.6)), u" ")
 
     def test_should_return_shade_one(self):
-        self.assertEqual(converter.char_for_color(Color(0.799, 0.0, 0.0)), "░")
-        self.assertEqual(converter.char_for_color(Color(0.723, 0.0, 0.95)), "░")
-        self.assertEqual(converter.char_for_color(Color(0.601, 0.4, 0.6)), "░")
+        self.assertEqual(converter.char_for_color(Color(0.799, 0.0, 0.0)), u"░")
+        self.assertEqual(converter.char_for_color(Color(0.723, 0.0, 0.95)), u"░")
+        self.assertEqual(converter.char_for_color(Color(0.601, 0.4, 0.6)), u"░")
 
     def test_should_return_shade_two(self):
-        self.assertEqual(converter.char_for_color(Color(0.599, 0.0, 0.0)), "▒")
-        self.assertEqual(converter.char_for_color(Color(0.501, 1.0, 0.0)), "▒")
-        self.assertEqual(converter.char_for_color(Color(0.4, 0.4, 0.6)), "▒")
+        self.assertEqual(converter.char_for_color(Color(0.599, 0.0, 0.0)), u"▒")
+        self.assertEqual(converter.char_for_color(Color(0.501, 1.0, 0.0)), u"▒")
+        self.assertEqual(converter.char_for_color(Color(0.4, 0.4, 0.6)), u"▒")
 
     def test_should_return_shade_three(self):
-        self.assertEqual(converter.char_for_color(Color(0.399, 0.0, 0.0)), "▓")
-        self.assertEqual(converter.char_for_color(Color(0.25, 0.0, 0.95)), "▓")
-        self.assertEqual(converter.char_for_color(Color(0.2, 0.4, 0.6)), "▓")
+        self.assertEqual(converter.char_for_color(Color(0.399, 0.0, 0.0)), u"▓")
+        self.assertEqual(converter.char_for_color(Color(0.25, 0.0, 0.95)), u"▓")
+        self.assertEqual(converter.char_for_color(Color(0.2, 0.4, 0.6)), u"▓")
 
     def test_should_return_shade_four(self):
-        self.assertEqual(converter.char_for_color(Color(0.199, 0.0, 0.0)), "█")
-        self.assertEqual(converter.char_for_color(Color(0.15, 0.0, 0.95)), "█")
-        self.assertEqual(converter.char_for_color(Color(0.05, 0.4, 0.6)), "█")
+        self.assertEqual(converter.char_for_color(Color(0.199, 0.0, 0.0)), u"█")
+        self.assertEqual(converter.char_for_color(Color(0.15, 0.0, 0.95)), u"█")
+        self.assertEqual(converter.char_for_color(Color(0.05, 0.4, 0.6)), u"█")
 
 class RoundingTest(TestCase):
     def test_should_round_with_one_decimal_precision(self):

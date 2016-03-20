@@ -3,7 +3,7 @@
 import math
 from wand.image import Image
 
-symbols = {1.0: " ", 0.9: " ", 0.8: " ",  0.7: "░", 0.6: "░", 0.5: "▒", 0.4:"▒", 0.3: "▓", 0.2: "▓", 0.1: "█", 0.0: "█"}
+symbols = {1.0: u" ", 0.9: u" ", 0.8: u" ",  0.7: u"░", 0.6: u"░", 0.5: u"▒", 0.4: u"▒", 0.3: u"▓", 0.2: u"▓", 0.1: u"█", 0.0: u"█"}
 
 def round(value):
     value = 0 if value < 0 else value
