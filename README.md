@@ -5,5 +5,5 @@ Turn images into ascii art
 
 ## Getting started
   * install ImageMagick
-  * install Python bindings for ImageMagick: `pip install wand`
-  * run script: `python ascii.py`
+  * install Python dependencies: `pip install -r requirements.txt`
+  * run script: `python asciilove/commandline.py` 
