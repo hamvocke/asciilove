@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from asciilove import converter
+import converter
 import argparse
 
 parser = argparse.ArgumentParser(description='Convert an image to ASCII art')
